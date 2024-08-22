@@ -1,15 +1,18 @@
-﻿using System.Numerics;
-using Neo;
+﻿using Neo.SmartContract.Framework;
+using Neo.SmartContract.Framework.Attributes;
 using Neo.SmartContract.Framework.Native;
 using Neo.SmartContract.Framework.Services;
+using System.Numerics;
 
 namespace FlamingoSwapPair
 {
     partial class FlamingoSwapPairContract
     {
+        [Safe]
         public static ulong Decimals() => 8;
+        [Safe]
         public static BigInteger TotalSupply() => TotalSupplyStorage.Get();
-
+        [Safe]
         public static BigInteger BalanceOf(UInt160 account)
         {
             Assert(account.IsValid, "Invalid Account");

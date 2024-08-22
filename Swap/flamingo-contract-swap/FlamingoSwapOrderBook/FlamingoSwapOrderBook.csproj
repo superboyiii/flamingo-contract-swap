@@ -1,12 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-    </PropertyGroup>
-    <ItemGroup>
-        <PackageReference Include="Neo3.Compiler.CSharp.Dev" Version="3.1.0" />
-        <PackageReference Include="Neo.SmartContract.Framework" Version="3.1.0" />
-    </ItemGroup>
-    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <Exec Command="$(neon3) $(ProjectDir)" />
-    </Target>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Neo.SmartContract.Framework" Version="3.7.4" />
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Message Text="Start NeoContract converter, Source File: $(TargetPath)" Importance="high">
+    </Message>
+    <Exec Command="nccs &quot;$(ProjectPath)&quot;" />
+  </Target>
 </Project>

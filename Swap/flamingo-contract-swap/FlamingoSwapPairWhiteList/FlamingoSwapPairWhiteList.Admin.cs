@@ -1,8 +1,6 @@
-﻿using Neo;
-using Neo.SmartContract.Framework;
+﻿using Neo.SmartContract.Framework;
 using Neo.SmartContract.Framework.Native;
 using Neo.SmartContract.Framework.Services;
-using Neo.SmartContract.Framework.Attributes;
 
 namespace FlamingoSwapPairWhiteList
 {
@@ -10,9 +8,8 @@ namespace FlamingoSwapPairWhiteList
     {
         #region Admin
 
-#warning 检查此处的 Admin 地址是否为最新地址
-        [InitialValue("NdDvLrbtqeCVQkaLstAwh3md8SYYwqWRaE", Neo.SmartContract.ContractParameterType.Hash160)]
-        static readonly UInt160 superAdmin = default;
+#warning Please check if the admin here is the latest!
+        static readonly UInt160 superAdmin = "NdDvLrbtqeCVQkaLstAwh3md8SYYwqWRaE";
         const string AdminKey = nameof(superAdmin);
 
 

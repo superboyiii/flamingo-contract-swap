@@ -1,10 +1,9 @@
-﻿using System.ComponentModel;
-using FlamingoSwapFactory.Models;
-using Neo;
+﻿using FlamingoSwapFactory.Models;
 using Neo.SmartContract.Framework;
+using Neo.SmartContract.Framework.Attributes;
 using Neo.SmartContract.Framework.Native;
 using Neo.SmartContract.Framework.Services;
-using Neo.SmartContract.Framework.Attributes;
+using System.ComponentModel;
 
 namespace FlamingoSwapFactory
 {

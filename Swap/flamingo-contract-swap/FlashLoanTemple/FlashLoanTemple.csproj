@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Neo.SmartContract.Framework" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Neo.SmartContract.Framework" Version="3.1.0" />
+    <PackageReference Include="Neo.SmartContract.Framework" Version="3.7.4" />
   </ItemGroup>
 </Project>

@@ -1,10 +1,8 @@
-using System.Numerics;
-using System.ComponentModel;
-using Neo;
 using Neo.SmartContract.Framework;
-using Neo.SmartContract.Framework.Services;
-using Neo.SmartContract.Framework.Native;
 using Neo.SmartContract.Framework.Attributes;
+using Neo.SmartContract.Framework.Native;
+using Neo.SmartContract.Framework.Services;
+using System.Numerics;
 
 namespace FlamingoSwapPair
 {
@@ -13,11 +11,9 @@ namespace FlamingoSwapPair
         #region Settings
 
         //Test
-        [InitialValue("NVGUQ1qyL4SdSm7sVmGVkXetjEsvw2L3NT", Neo.SmartContract.ContractParameterType.Hash160)]
-        static readonly UInt160 superAdmin = default;
+        static readonly UInt160 superAdmin = "NVGUQ1qyL4SdSm7sVmGVkXetjEsvw2L3NT";
 
-        [InitialValue("0xf9c55e595b39ded1e866efcc163445a168d378d5", Neo.SmartContract.ContractParameterType.Hash160)]
-        static readonly UInt160 WhiteListContract = default;
+        static readonly UInt160 WhiteListContract = "0xf9c55e595b39ded1e866efcc163445a168d378d5";
 
         ////Main
         //[InitialValue("NdDvLrbtqeCVQkaLstAwh3md8SYYwqWRaE", Neo.SmartContract.ContractParameterType.Hash160)]
@@ -29,16 +25,15 @@ namespace FlamingoSwapPair
         #region TokenAB
 
 
-        [DisplayName("symbol")]
+        [Safe]
         public static string Symbol() => "FLP-fWBTC-fUSDT"; //symbol of the token
 
-        #region tokenA
-        [InitialValue("0x9b9f7db02c0a2d6aa5ad9be7bba843027bf5b5f2", Neo.SmartContract.ContractParameterType.Hash160)] //bENO
-        static readonly UInt160 TokenA = default;
+        #region tokenA 
+        //bENO
+        static readonly UInt160 TokenA = "0x9b9f7db02c0a2d6aa5ad9be7bba843027bf5b5f2";
         #endregion
 
-        [InitialValue("0xa2d5f4378c42d118ebc7e1690f9478d3e00aefa1", Neo.SmartContract.ContractParameterType.Hash160)]
-        static readonly UInt160 TokenB = default;
+        static readonly UInt160 TokenB = "0xa2d5f4378c42d118ebc7e1690f9478d3e00aefa1";
 
 
         #endregion

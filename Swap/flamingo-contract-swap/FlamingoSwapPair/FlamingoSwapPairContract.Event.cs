@@ -1,6 +1,6 @@
-﻿using System.ComponentModel;
+﻿using Neo.SmartContract.Framework;
+using System.ComponentModel;
 using System.Numerics;
-using Neo;
 
 namespace FlamingoSwapPair
 {

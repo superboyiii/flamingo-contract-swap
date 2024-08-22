@@ -1,6 +1,4 @@
-﻿using Neo;
-using Neo.SmartContract;
-using Neo.SmartContract.Framework;
+﻿using Neo.SmartContract.Framework;
 using Neo.SmartContract.Framework.Attributes;
 using Neo.SmartContract.Framework.Native;
 using Neo.SmartContract.Framework.Services;
@@ -12,14 +10,11 @@ namespace FlamingoSwapOrderBook
         #region Admin
 
 #warning Update the admin address if necessary
-        [InitialValue("NdDvLrbtqeCVQkaLstAwh3md8SYYwqWRaE", ContractParameterType.Hash160)]
-        static readonly UInt160 superAdmin = default;
+        static readonly UInt160 superAdmin = "NdDvLrbtqeCVQkaLstAwh3md8SYYwqWRaE";
 
-        [InitialValue("0xc0695bdb8a87a40aff33c73ff6349ccc05fa9f01", ContractParameterType.Hash160)]
-        static readonly UInt160 Factory = default;
+        static readonly UInt160 Factory = "0xc0695bdb8a87a40aff33c73ff6349ccc05fa9f01";
 
-        [InitialValue("0xd6abe115ecb75e1fa0b42f5e85934ce8c1ae2893", ContractParameterType.Hash160)]
-        static readonly UInt160 bNEO = default;
+        static readonly UInt160 bNEO = "0xd6abe115ecb75e1fa0b42f5e85934ce8c1ae2893";
 
         static readonly uint ORDER_PER_PAGE = 1 << 8;
 

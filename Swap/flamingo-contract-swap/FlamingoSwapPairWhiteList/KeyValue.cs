@@ -1,5 +1,5 @@
-﻿using System.Numerics;
-using Neo;
+﻿using Neo.SmartContract.Framework;
+using System.Numerics;
 
 namespace FlamingoSwapPairWhiteList
 {

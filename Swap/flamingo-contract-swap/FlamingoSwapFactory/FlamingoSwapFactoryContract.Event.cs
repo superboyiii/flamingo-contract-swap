@@ -1,5 +1,5 @@
-﻿using System.ComponentModel;
-using Neo;
+﻿using Neo.SmartContract.Framework;
+using System.ComponentModel;
 
 namespace FlamingoSwapFactory
 {
