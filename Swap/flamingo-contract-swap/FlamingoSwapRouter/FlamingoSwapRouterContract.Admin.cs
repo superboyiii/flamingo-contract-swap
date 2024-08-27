@@ -1,20 +1,14 @@
-﻿using Neo;
-using Neo.SmartContract.Framework;
-using Neo.SmartContract.Framework.Services;
+﻿using Neo.SmartContract.Framework;
 using Neo.SmartContract.Framework.Native;
-using Neo.SmartContract;
-using Neo.SmartContract.Framework.Attributes;
+using Neo.SmartContract.Framework.Services;
 
 namespace FlamingoSwapRouter
 {
     public partial class FlamingoSwapRouterContract
     {
         #region Admin
-        [InitialValue("NVGUQ1qyL4SdSm7sVmGVkXetjEsvw2L3NT", ContractParameterType.Hash160)]
-        static readonly UInt160 superAdmin = default;
-
-        [InitialValue("0x52bf47559436d3572a9b1cb83c056dc39cb42d0d", ContractParameterType.Hash160)]
-        static readonly UInt160 Factory = default;
+        static readonly UInt160 superAdmin = "NVGUQ1qyL4SdSm7sVmGVkXetjEsvw2L3NT";
+        static readonly UInt160 Factory = "0x52bf47559436d3572a9b1cb83c056dc39cb42d0d";
 
         //[InitialValue("NdDvLrbtqeCVQkaLstAwh3md8SYYwqWRaE", ContractParameterType.Hash160)]
         //static readonly UInt160 superAdmin = default;
